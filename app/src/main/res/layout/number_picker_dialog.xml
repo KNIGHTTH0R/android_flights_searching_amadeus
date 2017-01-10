@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#FFFFFF"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/xaxa"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignEnd="@+id/relativeLayout"
+            android:layout_alignRight="@+id/relativeLayout"
+            android:background="#400344"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/numberviasfew1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="Passengers"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/xaxa"
+            android:orientation="vertical">
+
+            <NumberPicker
+                android:id="@+id/adultsNumberPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <NumberPicker
+                android:id="@+id/childrenNumberPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/adultsNumberPicker"
+                android:layout_alignBottom="@+id/adultsNumberPicker"
+                android:layout_toEndOf="@+id/adultsNumberPicker"
+                android:layout_toRightOf="@+id/adultsNumberPicker" />
+
+
+            <TextView
+                android:id="@+id/numberview1"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:lines="2"
+                android:text="Adults"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/numberview"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/numberview1"
+                android:layout_toRightOf="@+id/numberview1"
+                android:lines="2"
+                android:text="Children"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <NumberPicker
+                android:id="@+id/infantsNumberPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/childrenNumberPicker"
+                android:layout_alignBottom="@+id/childrenNumberPicker"
+                android:layout_toEndOf="@+id/childrenNumberPicker"
+                android:layout_toRightOf="@+id/childrenNumberPicker" />
+
+            <TextView
+                android:id="@+id/nufmberview"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/infantsNumberPicker"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/infantsNumberPicker"
+                android:lines="2"
+                android:text="Infants"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="#FFFFFF"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancelPickerButton"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relativeLayout"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/okPickerButton"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout"
+
+            android:text="Ok" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

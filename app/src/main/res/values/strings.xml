@@ -1,0 +1,143 @@
+<resources>
+    <string name="app_name">SearchFlights</string>
+
+    <!-- spinner options - travel class -->
+    <string name="economy">Economy</string>
+    <string name="prenium_economy">Prenium economy</string>
+    <string name="business_class">Business class</string>
+    <string name="first_class">First class</string>
+
+    <!-- spinner values - travel class -->
+    <string name="economy_value">ECONOMY</string>
+    <string name="prenium_economy_value">PREMIUM_ECONOMY</string>
+    <string name="business_class_value">BUSINESS</string>
+    <string name="first_class_value">FIRST</string>
+
+    <!-- one way or return radio buttons -->
+    <string name="radio_return">Return</string>
+    <string name="radio_oneway">One Way</string>
+
+    <!-- currencies list -->
+    <string-array name="listArray">
+        <item>	Argentine Peso</item>
+        <item>	Australian Dollar</item>
+        <item>	Bahraini Dinar</item>
+        <item>	Barbadian Dollar</item>
+        <item>	Brazilian Real</item>
+        <item>British Pound</item>
+        <item>	Canadian Dollar	</item>
+        <item>	Central African CFA franc</item>
+        <item>	Chilean Peso</item>
+        <item>	Chinese Yuan</item>
+        <item>	Cyprus Pound</item>
+        <item>	Czech Koruna</item>
+        <item>	Danish Krone</item>
+        <item>	East Caribbean Dollar</item>
+        <item>	Egyptian Pound</item>
+        <item>	Estonian Kroon</item>
+        <item>	Euro</item>
+        <item>	Hong Kong Dollar</item>
+        <item>	Hungarian Forint</item>
+        <item>	Icelandic Krona	</item>
+        <item>	Indian Rupee</item>
+        <item>	Indonesian Rupiah</item>
+        <item>	Israeli Sheqel</item>
+        <item>	Jamaican Dollar</item>
+        <item>	Japanese Yen</item>
+        <item>	Jordanian Dinar	</item>
+        <item>	Kenyan Shilling</item>
+        <item>	Latvian Lats</item>
+        <item>	Lebanese Pound</item>
+        <item>	Lithuanian Litas</item>
+        <item>	Malaysian Ringgit</item>
+        <item>	Mexican Peso</item>
+        <item>	Moroccan Dirham</item>
+        <item>	Namibian Dollar</item>
+        <item>	Nepalese Rupee</item>
+        <item>	New Zealand Dollar</item>
+        <item>	Norwegian Krone</item>
+        <item>	Omani Rial</item>
+        <item>	Pakistani Rupee</item>
+        <item>	Panamanian Balboa</item>
+        <item>	Philippine Peso</item>
+        <item>	Polish Zloty</item>
+        <item>	Qatari Riyal</item>
+        <item>	Romanian Leu</item>
+        <item>	Russian Rouble</item>
+        <item>	Saudi Riyal</item>
+        <item>	Singapore Dollar</item>
+        <item>	South African Rand</item>
+        <item>	South Korean Won</item>
+        <item>	Sri Lankan Rupee</item>
+        <item>	Swedish Krona</item>
+        <item>	Swiss Franc</item>
+        <item>	Thai Baht</item>
+        <item>	Turkish Lira</item>
+        <item>	United Arab Emirates Dirham</item>
+        <item>	US Dollar</item>
+        <item>	Venezuelan bolivar</item>
+        <item>	West African CFA franc</item>
+    </string-array>
+
+    <string-array name="listValues">
+        <item>	ARS</item>
+        <item>	AUD</item>
+        <item>	BHD</item>
+        <item>	BBD</item>
+        <item>	BRL</item>
+        <item>	GBP</item>
+        <item>	CAD</item>
+        <item>	XAF</item>
+        <item>	CLP</item>
+        <item>	CNY</item>
+        <item>	CYP</item>
+        <item>	CZK</item>
+        <item>	DKK</item>
+        <item>	XCD</item>
+        <item>	EGP</item>
+        <item>	EEK</item>
+        <item>	EUR</item>
+        <item>	HKD</item>
+        <item>	HUF</item>
+        <item>	ISK</item>
+        <item>	INR</item>
+        <item>	IDR</item>
+        <item>	ILS</item>
+        <item>	JMD</item>
+        <item>	JPY</item>
+        <item>	JOD</item>
+        <item>	KES</item>
+        <item>	LVL</item>
+        <item>	LBP</item>
+        <item>	LTL</item>
+        <item>	MYR</item>
+        <item>	MXN</item>
+        <item>	MAD</item>
+        <item>	NAD</item>
+        <item>	NPR</item>
+        <item>	NZD</item>
+        <item>	NOK</item>
+        <item>	OMR</item>
+        <item>	PKR</item>
+        <item>	PAB</item>
+        <item>	PHP</item>
+        <item>	PLN</item>
+        <item>	QAR</item>
+        <item>	RON</item>
+        <item>	RUB</item>
+        <item>	SAR</item>
+        <item>	SGD</item>
+        <item>	ZAR</item>
+        <item>	KRW</item>
+        <item>	LKR</item>
+        <item>	SEK</item>
+        <item>	CHF</item>
+        <item>	THB</item>
+        <item>	TRY</item>
+        <item>	AED</item>
+        <item>	USD</item>
+        <item>	VEF</item>
+        <item>	XOF</item>
+    </string-array>
+
+</resources>
