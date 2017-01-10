@@ -67,7 +67,6 @@ public class SearchFlightsActivity extends Activity {
         return (MySearchFlight) getIntent().getSerializableExtra("mySearchFlight");//get passed intent & get mySearchFlight from intent
     }//getMySearchFlightExtra
 
-
     private void startFlightsSearch(MySearchFlight mySearchFlight) {
         URL flightsRequestUrl = NetworkUtils.buildUrlForFlightsSearch(mySearchFlight);//build the url
         getFlightsResponce(flightsRequestUrl.toString());
@@ -95,7 +94,10 @@ public class SearchFlightsActivity extends Activity {
             //Log.v("itineraries count: ",""+newFlightsData.getResults().size());
             //mAdapter.setNewData(newFlightsData.getResults());
             //Log.i("PostActivity", response);
-            getAllMarketingAirlineCodes(newFlightsData.getResults());
+            String airlineCodesString =  getAllMarketingAirlineCodes(newFlightsData.getResults());
+            URL airlinesRequestUrl = NetworkUtils.buildUrlForAirlinesSearch(airlineCodesString);//build the url
+            getAirlinesResponce(airlinesRequestUrl.toString());
+
         }
     };//onPostsLoaded
 
@@ -108,8 +110,7 @@ public class SearchFlightsActivity extends Activity {
         }
     };//onPostsError
 
-
-    private void getAllMarketingAirlineCodes(List<Results> myFlightResults) {
+    private String getAllMarketingAirlineCodes(List<Results> myFlightResults) {
         List<String> airlinesList = new ArrayList<String>();
 
         myFlightResults1 = myFlightResults;
@@ -123,27 +124,27 @@ public class SearchFlightsActivity extends Activity {
                     airlinesList.add(flight.getOperating_airline());
                 }//if
             }//for
-            for (Flights flight : results.getItineraries().get(0).getInbound().getFlights()) {
-                if (!airlinesList.contains(flight.getMarketing_airline())) {
-                    airlinesList.add(flight.getMarketing_airline());
-                }//if
-                if (!airlinesList.contains(flight.getOperating_airline())) {
-                    airlinesList.add(flight.getOperating_airline());
-                }//if
-            }//for
-        }//for
 
+            if(results.getItineraries().get(0).getInbound() != null){
+                for (Flights flight : results.getItineraries().get(0).getInbound().getFlights()) {
+                    if (!airlinesList.contains(flight.getMarketing_airline())) {
+                        airlinesList.add(flight.getMarketing_airline());
+                    }//if
+                    if (!airlinesList.contains(flight.getOperating_airline())) {
+                        airlinesList.add(flight.getOperating_airline());
+                    }//if
+                }//for
+            }
+
+
+        }//for
 
         String airlinesCodes = "";
         for (String airlineCode : airlinesList) {
             airlinesCodes += airlineCode + ",";
         }
 
-
-        URL airlinesRequestUrl = NetworkUtils.buildUrlForAirlinesSearch(airlinesCodes);//build the url
-        getAirlinesResponce(airlinesRequestUrl.toString());
-
-
+        return airlinesCodes;
     }//getAllMarketingAirlineCodes
 
     public void getAirlinesResponce(String airlinesRequestUrl) {
@@ -172,10 +173,15 @@ public class SearchFlightsActivity extends Activity {
                     flight.setMarketing_airline(newAirlineData.getAirlineName(flight.getMarketing_airline()));
                     flight.setOperating_airline(newAirlineData.getAirlineName(flight.getOperating_airline()));
                 }//for
-                for (Flights flight : results.getItineraries().get(0).getInbound().getFlights()) {
-                    flight.setMarketing_airline(newAirlineData.getAirlineName(flight.getMarketing_airline()));
-                    flight.setOperating_airline(newAirlineData.getAirlineName(flight.getOperating_airline()));
-                }//for
+
+                if(results.getItineraries().get(0).getInbound() != null){
+                    for (Flights flight : results.getItineraries().get(0).getInbound().getFlights()) {
+                        flight.setMarketing_airline(newAirlineData.getAirlineName(flight.getMarketing_airline()));
+                        flight.setOperating_airline(newAirlineData.getAirlineName(flight.getOperating_airline()));
+                    }//for
+                }
+
+
             }//for
 
 
